@@ -10,7 +10,10 @@
 </p>
 
 <?php
-
+echo $id;
+echo $email;
+echo $userstatus;
+echo $avatar;
 print_r($data[0]);
 
 

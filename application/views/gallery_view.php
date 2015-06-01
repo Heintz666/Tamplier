@@ -3,11 +3,15 @@
 <p>
 Тут будут фотографии пользователя
 </p>
-<div class="thumbnail">
-<?php
 
+<div class="row">
+
+<?php
 foreach($data[0] as $row){
-echo "<img src=".$row.">";
+echo "
+<div class=\"col-md-4\">
+<a href=\"#\" class=\"thumbnail\"><img src=".$row." width=\"280\" /></a>
+</div>";
 }
 
 ?>

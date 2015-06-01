@@ -11,20 +11,20 @@ $testdb = new Db;
 
 $dbh = $testdb->DBH;
 
-$start=10;
-$limit=12;
-
+$start=1;
+$limit=4;
 
 try {
-$result = $dbh->prepare("SELECT * FROM `motivator` LIMIT $start,$limit ");
-$result->bindParam(':login',$login);  
+$result = $dbh->prepare("SELECT * FROM `gallery` LIMIT :start,:limit ");
+$result->bindValue(':limit',$limit, PDO::PARAM_INT);
+$result->bindValue(':start',$start, PDO::PARAM_INT);  
 $result->execute();
 
 $error_array = $dbh->errorinfo();
 
 while($row = $result->fetch())
 {
-array_push($arr,$row[fotomot]);
+array_push($arr,$row[fotomini]);
 
 }
 

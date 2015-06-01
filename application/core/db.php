@@ -4,8 +4,6 @@ class Db
 {
 var $DBH;
 
-
-
 var $host = "localhost";
 var $db_name = "todo";
 var $user = "root";

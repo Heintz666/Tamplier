@@ -1,11 +1,30 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    border: 0 none;
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+html {
+    height: 100%;
+}
+
+p{
+color:#000000;
+}
+
 body {
-background:brown;
-margin:0 0;
-padding:0 0;
+background:lightgrey;
+	color: black;
+	line-height: 1.5;
+	margin: 0;
+    height: 100%;
+    width: 100%;
 }
 
 a{
-color:#000;
+color:blue;
 font:12px Helvetica,San-serif,Arial;
 text-decoration: none;
 }
@@ -17,19 +36,17 @@ text-decoration: none;
 }
 
 a:visited{
-color:#000;
+color:blue;
 font:12px Helvetica,San-serif,Arial;
 text-decoration: none;
 }
 
 div#grass{
 background:violet;
-position: absolute;
-width:1000px;
-margin:0 auto;
-padding:0 0;
-min-height:100%;
-display:table-cell;
+    height: auto !important;
+    margin: 0 auto;
+    min-height: 100%;
+    width: 1000px;
 }
 
 div#grassout{
@@ -54,26 +71,26 @@ padding:0 0;
 
 
 footer{
-background:orange;
-position:fixed;
-height:50px;
+background:brown;
 width:1000px;
-bottom:0;
-padding:0 0;
+height:150px;
+overflow:auto;
 display:block;
+margin:0 auto;
+position:relative;
+margin-bottom: 0;
 }
 
 #main{
-background:cyan;
-height: auto;
-min-height: 200px; 
+background:lightgreen;
 width:1000px;
-margin:0 auto;
-padding:0 0;
-position:relative;
-display:block;
 overflow:auto;
+display:block;
+margin-bottom: 200px;
+position:relative;
+
 }
+
 
 .menu{
 background:orange;
@@ -97,13 +114,6 @@ padding:0 0;
 position:relative;
 }
 
-div#wrwr{
-background:crimson;
-width:1000px;
-margin:0 auto;
-display:block;
-min-height:1px;
-}
 
 div.test{
 background:pink;
@@ -112,4 +122,15 @@ width:400px;
 
 input.datepicker9{
 background:red;
+}
+
+div.row{
+background:yellow;
+height:auto;
+min-width:210px;
+margin:2px;
+padding:2px;
+position:relative;
+display:block;
+float:left;
 }

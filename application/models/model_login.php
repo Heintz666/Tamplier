@@ -64,6 +64,7 @@ if (!empty($row2[id]))
 			$avatar = $row2[avatar]; 
 			$email = $row2[email];
 			$date = $row2[date];
+			$userstatus = $row2[userstatus];
 		
    Session::init();
    Session::set('loggedIn', true);
@@ -73,6 +74,7 @@ if (!empty($row2[id]))
    Session::set('avatar', $avatar);
    Session::set('email', $email);
    Session::set('date', $date);
+   Session::set('userstatus', $userstatus);
 				 
 print "<script>window.location.href='/'</script>";
 

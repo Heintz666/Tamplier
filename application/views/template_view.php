@@ -2,7 +2,9 @@
 Session::init();
 $id = Session::get('userid');
 $login = Session::get('login');
+$avatar = Session::get('avatar');
 $email = Session::get('email');
+$userstatus = Session::get('userstatus');
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,8 +26,7 @@ $email = Session::get('email');
 	
 </head>
 <body>
-<div id="grassout">
-   <div id="wrwr"> 
+
 	<div id="grass">
 	
 <header>
@@ -42,8 +43,25 @@ header
 
 <div id="loginin">
 <?php if(isset($id)){?>
-Вы вошли как <?=$login;?>
-<a href="/login_out/" class="menu"><img src="/img/exit.png" height="16"> Выход</a><?php } else {?>
+<ul>
+<li>Вы вошли как <?php echo $login;?></li>
+<li>Ваш профиль <a href="/profile/index/<?php echo $id;?> target="_self">
+<span class="glyphicon glyphicon-user"></span></li>
+<li><a href="/login_out/" class="menu">
+<img src="/img/exit.png" height="16"> <span class="glyphicon glyphicon-off"></span> 
+Выход</a></li>
+<?php
+echo $userstatus;
+if($userstatus=="admin" || $userstatus=="superadmin" ){
+?>
+<li><a href="/admin" target="_blank">Админпанель </a>
+<span class="glyphicon glyphicon-tower"></span>
+</li>
+<?php
+}
+?>
+</ul><?php } else {?>
+
 
 <div class="container">
 <form class="form-signin" role="form" action="/login" method="POST">
@@ -68,16 +86,16 @@ header
 <?php include 'application/views/'.$content_view; ?>	
 
 </div>
-
+</div>
 <div id="clear"></div>	
 
 <footer>
 footer	
 </footer>
 
-	</div>
 
- </div>
+
+
  
 <?php
 Require_js::script_js();	

@@ -7,18 +7,40 @@ var $login;
 var $password;
 var $avatar;
 var $email;
+var $userstatus;
 
 function Setuser($user) {
-$result3= mysql_query("SELECT * FROM users WHERE id = '$user'");
-$myrow3    = mysql_fetch_assoc($result3);
+$db = new Db;//new base obj
+$dbh = $db->DBH;
 
-if(isset($myrow3['id']) AND $myrow3['id']==$user){
-$this->id = $user;
-$this->login = $login;
-$this->password = $password;
-$this->avatar = $avatar;
-$this->email = $email;
+try{
+$result3= $dbh->prepare("SELECT * FROM `users` WHERE id = ':user'");
+$result3->setFetchMode(PDO::FETCH_ASSOC);
+$result3->bindValue(":user",$user, PDO::PARAM_INT);
+
+$result3->execute();
+$error_array = $dbh->errorinfo();
 }
+
+catch (PDOExeption $e){
+ echo $e->getMessage();
+}
+
+while($usinfo = $result3->fetch())//âûâîä ğåçóëüòàòà
+{
+
+if(isset($usinfo[id]) AND $usinfo[id]==$user){
+$this->id = $usinfo[id];
+$this->login = $usinfo[login];
+$this->password = $usinfo[password];
+$this->avatar = $usinfo[avatar];
+$this->email = $usinfo[email];
+$this->userstatus = $usinfo[userstatus];
+}
+
+}
+
+
 }
 
 
@@ -28,6 +50,7 @@ echo $this->login;
 echo $this->password;
 echo $this->avatar;
 echo $this->email;
+echo $this->userstatus;
 }
 
 }
