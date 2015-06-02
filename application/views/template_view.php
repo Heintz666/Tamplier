@@ -86,9 +86,9 @@ if($userstatus=="admin" || $userstatus=="superadmin" ){
 <?php include 'application/views/'.$content_view; ?>	
 
 </div>
-</div>
-<div id="clear"></div>	
 
+<div id="clear"></div>	
+</div> 
 <footer>
 footer	
 </footer>
@@ -101,7 +101,7 @@ footer
 Require_js::script_js();	
 ?>
  
-</div> 
+
 
 
 

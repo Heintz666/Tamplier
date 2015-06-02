@@ -134,3 +134,53 @@ position:relative;
 display:block;
 float:left;
 }
+
+/* formforreq
+*/
+
+div.reqform{
+height:180px;
+width:300px;
+background:#333;
+margin:0 auto;
+position:relative;
+display:block;
+text-align:left;
+padding:5px;
+border-radius:5px;
+color:white;
+}
+
+input[type="text"].inpf{
+width:200px;
+background:#333;
+border:1px solid orange;
+border-radius:3px;
+color:orange;
+}
+
+textarea.inpf{
+width:280px;
+background:#333;
+margin:0;
+position:relative;
+border:1px solid orange;
+border-radius:3px;
+color:orange;
+}
+
+ul.inpf{
+width:300px;
+background:#;
+list-style-type:none;
+padding:5px;
+}
+
+input[type="submit"]#ok{
+background:#333;
+border:1px solid orange;
+border-radius:3px;
+margin:3px 180px;
+position:relative;
+color:orange;
+}
