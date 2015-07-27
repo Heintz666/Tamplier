@@ -7,6 +7,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 html {
+background:green;
     height: 100%;
 }
 
@@ -15,12 +16,11 @@ color:#000000;
 }
 
 body {
-background:lightgrey;
+background:blue;
 	color: black;
 	line-height: 1.5;
 	margin: 0;
-    height: 100%;
-    width: 100%;
+
 }
 
 a{
@@ -45,12 +45,13 @@ div#grass{
 background:violet;
     height: auto !important;
     margin: 0 auto;
-    min-height: 100%;
+    min-height: 90%;
     width: 1000px;
+	overflow:auto;
 }
 
 div#grassout{
-background:white;
+background:red;
 position: absolute;
 width:100%;
 margin:0 auto;
@@ -68,12 +69,14 @@ margin:0 auto;
 padding:0 0;
 }
 
-
+input.datepicker9{
+background:red;
+}
 
 footer{
 background:brown;
 width:1000px;
-height:150px;
+height:10%;
 overflow:auto;
 display:block;
 margin:0 auto;
@@ -90,7 +93,6 @@ margin-bottom: 200px;
 position:relative;
 
 }
-
 
 .menu{
 background:orange;
@@ -120,9 +122,7 @@ background:pink;
 width:400px;
 }
 
-input.datepicker9{
-background:red;
-}
+
 
 div.row{
 background:yellow;
@@ -133,6 +133,16 @@ padding:2px;
 position:relative;
 display:block;
 float:left;
+}
+
+div#mainin{
+background:orange;
+min-height:300px;
+width:980px;
+padding:5px;
+position:relative;
+display:block;
+margin:0 auto;
 }
 
 /* formforreq
@@ -152,7 +162,7 @@ color:white;
 }
 
 input[type="text"].inpf{
-width:200px;
+width:280px;
 background:#333;
 border:1px solid orange;
 border-radius:3px;
@@ -183,4 +193,93 @@ border-radius:3px;
 margin:3px 180px;
 position:relative;
 color:orange;
+}
+
+
+div.comment{
+width:800px;
+min-height:100px;
+display:block;
+margin:5px auto;
+padding:5px;
+position:relative;
+overflow:auto;
+}
+
+div.commleft{
+background:red;
+width:120px;
+min-height:100px;
+display:block;
+margin:0;
+padding:5px;
+position:relative;
+float:left;
+}
+
+div.commlogin{
+background:pink;
+width:110px;
+min-height:10px;
+display:block;
+margin:0;
+padding:5px;
+position:relative;
+text-align:center;
+}
+
+div.commavatar{
+background:crimson;
+width:110px;
+min-height:10px;
+display:table-cell;
+margin:0;
+padding:5px;
+position:relative;
+text-align:center;
+vertical-align:middle;
+}
+
+div.commright{
+background:lime;
+width:670px;
+min-height:120px;
+display:block;
+margin:0;
+padding:5px;
+position:relative;
+float:right;
+}
+
+div.commdate{
+background:lightgreen;
+width:660px;
+min-height:20px;
+display:block;
+margin:0;
+padding:5px;
+position:relative;
+text-align:left;
+overflow:auto;
+}
+
+div.commred{
+background:orange;
+width:50px;
+min-height:20px;
+display:block;
+margin:0;
+padding:5px;
+position:relative;
+float:right;
+}
+
+div.commtext{
+background:green;
+width:660px;
+min-height:120px;
+display:block;
+margin:0;
+padding:5px;
+position:relative;
 }

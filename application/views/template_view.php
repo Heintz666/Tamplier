@@ -17,8 +17,9 @@ $userstatus = Session::get('userstatus');
 
     <script src="/bootstrap/js/bootstrap.min.js"></script>
 	<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+	
 	<script src="/bootstrap/js/bootstrap.js"></script>
-	<link href="/bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
+	
 
 <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
@@ -26,8 +27,8 @@ $userstatus = Session::get('userstatus');
 	
 </head>
 <body>
-
-	<div id="grass">
+<div id="grassout">
+<div id="grass">
 	
 <header>
 header
@@ -87,11 +88,15 @@ if($userstatus=="admin" || $userstatus=="superadmin" ){
 
 </div>
 
-<div id="clear"></div>	
+
 </div> 
+
+<div id="clear"></div>	
 <footer>
 footer	
 </footer>
+</div> 
+
 
 
 

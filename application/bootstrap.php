@@ -6,6 +6,7 @@ Session::init();
 require_once 'core/model.php';
 require_once 'core/view.php';
 require_once 'core/controller.php';
+require_once 'core/defaultvalues.php';
 require_once 'core/userinfo.php';
 require_once 'core/jsrequire.php';
 

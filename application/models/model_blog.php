@@ -105,6 +105,7 @@ $dbh = null;
 	
 		return array(
 		$arr,	
+		$pagenum,
 		);
 	
 	

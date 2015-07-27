@@ -1,8 +1,8 @@
 @nice-blue: #5B83AD;
 @light-blue: @nice-blue + #111;
+@postback:lightgrey;
 
-
-div.post {
+.post {
   color: @light-blue;
   background-color:black;
 }
@@ -39,4 +39,16 @@ color:lime;
 background:yellow;
 font:18px Helvetica,San-serif,Arial;
 text-decoration: none;
+}
+
+.testidmixin(@color:#333333){
+color:@color;
+}
+
+div#tester{
+.testidmixin(lime);
+}
+
+div.comment{
+background:@postback;
 }
